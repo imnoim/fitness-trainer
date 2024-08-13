@@ -102,7 +102,7 @@ section {
 
 /* header styles */
 
-.header {
+.header-wrapper {
     background-image: linear-gradient(to right top, #111111, #0d0d0d, #090909, #050505, #000000);
 }
 
@@ -159,6 +159,7 @@ section {
 .banner-text {
     flex-direction: column;
     gap: 1.75rem;
+    width: 60%;
 }
 
 .banner-text p {
@@ -185,6 +186,7 @@ section {
 
 .banner-img {
     position: relative;
+    width: 40%;
 }
 
 .video-tutorial {
@@ -192,14 +194,14 @@ section {
     border-radius: 12px;
     backdrop-filter: blur(20px);
     background: rgba(48, 48, 48, 0.54);
-    padding: 28px 23px;
-    width: 220px;
+    padding: 13px 15px;
+    width: 180px;
     gap: .75rem;
     align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-135%, 100%);
+    transform: translate(-165%, 150%);
 }
 
 .circle-red {
@@ -226,13 +228,13 @@ section {
     border-radius: 12px;
     backdrop-filter: blur(20px);
     background: rgba(255, 255, 255, 0.1);
-    padding: 17px 24px;
-    width: 220px;
+    padding: 13px 15px;
+    width: 180px;
     text-align: center;
     position: absolute;
     top: 30%;
     left: 100%;
-    transform: translate(-50%, -50%);
+    transform: translate(-110%, -50%);
 }
 
 .free-video-count {
@@ -348,45 +350,22 @@ section {
 
 .team-card {
     width: 100%;
-    height: 272px;
+    height: 100%;
     position: relative;
 }
 
 .team-card img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-radius: 1rem;
     filter: brightness(80%);
 }
 
 .team-card-info {
     position: absolute;
-    top: 50%;
-    left: 50%;
-}
-
-.team-card-info-1 {
-    transform: translate(-120%, 150%);
-}
-
-.team-card-info-2 {
-    transform: translate(-100%, 150%);
-}
-
-.team-card-info-3 {
-    transform: translate(-89%, 150%);
-}
-
-.team-card-info-4 {
-    transform: translate(-93%, 150%);
-}
-
-.team-card-info-5 {
-    transform: translate(-115%, 150%);
-}
-
-.team-card-info-6 {
-    transform: translate(-95%, 150%);
+    top: 75%;
+    left: 10%;
 }
 
 .trainer-name {
@@ -433,13 +412,22 @@ section {
         line-height: 120%;
     }
 
+    .banner-text,
+    .banner-img {
+        width: 100%;
+    }
+
+    .banner-img img {
+        width: 100%;
+    }
+
     .miama-font {
         font-size: 6rem;
     }
 
     .btn-primary,
     .btn-secondary {
-        padding: 14px 25px;
+        padding: 10px 10px;
         font-size: .85rem;
     }
 
@@ -447,12 +435,17 @@ section {
         width: 100%;
     }
 
-    .video-tutorial {
-        top: 35%;
-        left: 65%;
-        transform: translate(-135%, 100%);
-        width: 160px;
+    .video-tutorial,
+    .free-video {
+        width: 150px;
         padding: 15px 10px;
+    }
+
+    .video-tutorial {
+        top: 62%;
+        left: 65%;
+        transform: translate(-140%, 70%);
+
     }
 
     .circle-red {
@@ -471,10 +464,8 @@ section {
 
     .free-video {
         top: 20%;
-        left: 80%;
-        transform: translate(-50%, -50%);
-        width: 160px;
-        padding: 15px 10px;
+        left: 100%;
+        transform: translate(-90%, -40%);
     }
 
     .free-video-count {
@@ -533,6 +524,12 @@ section {
 
     .team-card {
         width: 100%;
+        height: 300px;
+    }
+
+    .team-card img {
+        width: 100%;
+        height: 100%;
     }
 
 }
