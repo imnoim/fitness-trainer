@@ -35,7 +35,9 @@ footer {
 
 .navbar,
 .banner,
-section {
+section,
+.footer,
+.footer-border-bottom {
     max-width: 1060px;
     margin: 0 auto;
 }
@@ -81,7 +83,8 @@ section {
 
 .banner-description,
 .section-description,
-.card-description {
+.card-description,
+.footer-description {
     color: rgba(255, 255, 255, 0.5);
     letter-spacing: 0.5px;
     line-height: 1.5rem;
@@ -392,7 +395,8 @@ th {
     margin-bottom: 2rem;
 }
 
-.calculate-bmi-form input[type="text"], .calculate-bmi-form select {
+.calculate-bmi-form input[type="text"],
+.calculate-bmi-form select {
     border: none;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
@@ -494,12 +498,63 @@ th {
 
 /* footer styles */
 
+.footer {
+    margin-top: 88px;
+    justify-content: space-between;
+    padding-top: 4rem;
+}
+
+.footer-left {
+    width: 40%;
+}
+
+.footer-left h3 {
+    font-size: 4rem;
+    line-height: 120%;
+    margin-bottom: 1.25rem;
+}
+
+.footer-middle h4,
+.footer-right h4 {
+    color: #fff;
+    font-size: 2rem;
+    line-height: 120%;
+    margin-bottom: 2.5rem;
+}
+
+.footer-middle p,
+.footer-right p {
+    margin-bottom: 1.25rem;
+}
+
+.footer-link {
+    text-decoration: none;
+    font-size: 1.125rem;
+    line-height: 120%;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-border-bottom {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.25;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    padding-bottom: 2rem;
+}
+
 /* mobile device styles */
 
 @media screen and (max-width: 576px) {
 
     .navbar,
-    .banner {
+    .banner,
+    .footer {
         padding: 1.25rem;
     }
 
@@ -517,7 +572,8 @@ th {
 
     .banner,
     .run,
-    .bmi {
+    .bmi,
+    .footer {
         flex-direction: column;
     }
 
@@ -630,7 +686,7 @@ th {
     .bmi-calculator-header {
         margin-top: 2rem;
     }
-    
+
     .bmi {
         padding: 2rem 0;
         margin-top: 2rem;
@@ -660,7 +716,7 @@ th {
         top: 60%;
         margin-top: -8px;
     }
-    
+
     #second-arrow::after {
         top: 20px;
         left: 290px;
@@ -688,6 +744,40 @@ th {
     #team-card-5,
     #team-card-6 {
         display: none;
+    }
+
+    .footer {
+        gap: 2rem;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        width: 100%;
+    }
+
+    .footer {
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+
+    .footer-middle p,
+    .footer-right p {
+        margin-bottom: 1.25rem;
+    }
+
+    .footer-middle h4,
+    .footer-right h4 {
+        margin-bottom: 2rem;
+    }
+
+    .footer-middle p,
+    .footer-right p {
+        margin-bottom: 1rem;
+    }
+
+    .footer-border-bottom {
+        margin-top: 1rem;
     }
 
 }
