@@ -471,6 +471,10 @@ th {
     border-radius: .5rem;
 }
 
+.membership-card-active {
+    border: 1px solid #E6533C;
+}
+
 .membership-card-title {
     font-size: 1.75rem;
     font-weight: 600;
@@ -494,7 +498,7 @@ th {
 
 .membership-btn-active {
     background-color: #E6533C;
-    border: none;
+    border: none;  
 }
 
 .membership-details {
